@@ -29,17 +29,10 @@ Build as any other `cmake` project.
 > ushc <filename>
 ```
 
-## Running the tests
-
-```
-> ushc-test
-```
-#:> ushc-test 2>&1 || true
 ## Example code;
 
-```
-#:> cat src/test.ush
-```
+#:> sed '/#l:/d' src/ushc-test
+#:> ushc-test 2>&1 || true
 
 ## Contributing
 

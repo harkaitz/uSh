@@ -29,36 +29,8 @@ Build as any other `cmake` project.
 > ushc <filename>
 ```
 
-## Running the tests
-
-```
-> ushc-test
-```
-```
-ush: 8) error, The program should end here
-1) First line.
-2) if 1 <code> working well.
-3) else working well.
-4) elseif working well.
-5) foreach 1
-5) foreach 2
-5) foreach 3
-5) foreach 4
-5) for 0 1
-5) for 0 2
-5) for 1 0
-5) for 1 2
-5) for 2 0
-5) for 2 1
-6) while 0
-6) while 1
-6) while 2
-6) while 3
-7) proc,exec: 1 a 2 b
-```
 ## Example code;
 
-```
 ```
 #!/usr/bin/env ushc
 # This is a comment.
@@ -95,6 +67,27 @@ exec kaixo a b
 error "8) error, The program should end here"
 echo "E) error not working."
 ```
+```
+ush: 8) error, The program should end here
+1) First line.
+2) if 1 <code> working well.
+3) else working well.
+4) elseif working well.
+5) foreach 1
+5) foreach 2
+5) foreach 3
+5) foreach 4
+5) for 0 1
+5) for 0 2
+5) for 1 0
+5) for 1 2
+5) for 2 0
+5) for 2 1
+6) while 0
+6) while 1
+6) while 2
+6) while 3
+7) proc,exec: 1 a 2 b
 ```
 
 ## Contributing
