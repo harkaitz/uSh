@@ -1,0 +1,56 @@
+#!/usr/bin/env ushc
+#l:
+#l:  Copyright (c) 2018 Harkaitz Agirre Ezama, harkaitzv@gmail.com
+#l:
+#l:  Permission is hereby granted, free of charge, to any person obtaining
+#l:  a copy of this software and associated documentation files (the
+#l:  "Software"), to deal in the Software without restriction, including
+#l:  without limitation the rights to use, copy, modify, merge, publish,
+#l:  distribute, sublicense, and/or sell copies of the Software, and to
+#l:  permit persons to whom the Software is furnished to do so, subject to
+#l:  the following conditions:
+#l:
+#l:  The above copyright notice and this permission notice shall be
+#l:  included in all copies or substantial portions of the Software.
+#l:
+#l:  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+#l:  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+#l:  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+#l:  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+#l:  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+#l:  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+#l:  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#l:
+# This is a comment.
+echo "1) First line."
+if 0 { echo "2) err: if 0 <code> is evaluated." }
+if 1 { echo "2) if 1 <code> working well." }
+if 0 { } else { echo "3) else working well." }
+if 0 { } elseif 1 { echo "4) elseif working well." }
+# foreach.
+foreach a 1 2 3 4 {
+    echo "5) foreach" $a
+}
+# for.
+for {set i 0} {<= $i 2} {set i (+ $i 1)} {
+    for {set j 0} {<= $j 2} {set j (+ $j 1)} {
+	if (== $i $j) {
+	    continue
+	}
+	echo "5) for" $i $j
+    }
+}
+# while.
+set i 0
+while {< $i 4} {
+    echo "6) while" $i
+    set i (+ $i 1)
+}
+# proc,exec.
+proc kaixo {} {
+    echo "7) proc,exec:" 1 $1 2 $2
+}
+exec kaixo a b
+# error
+error "8) error, The program should end here"
+echo "E) error not working."
