@@ -31,6 +31,10 @@ Build as any other `cmake` project.
 
 ## Example code;
 
+A script in uSh is in [src/ushc-test](src/ushc-test).
+
+The following:
+
 ```
 #!/usr/bin/env ushc
 # This is a comment.
@@ -67,6 +71,9 @@ exec kaixo a b
 error "8) error, The program should end here"
 echo "E) error not working."
 ```
+
+Generates this:
+
 ```
 ush: 8) error, The program should end here
 1) First line.

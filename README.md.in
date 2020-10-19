@@ -31,8 +31,19 @@ Build as any other `cmake` project.
 
 ## Example code;
 
-#:> sed '/#l:/d' src/ushc-test
-#:> ushc-test 2>&1 || true
+A script in uSh is in [src/ushc-test](src/ushc-test).
+
+The following:
+
+```
+%::> sed '/#l:/d' src/ushc-test
+```
+
+Generates this:
+
+```
+%::> ./build-x86_64-linux-gnu/src/ushc ./src/ushc-test 2>&1 || true
+```
 
 ## Contributing
 
